@@ -10,10 +10,10 @@ import java.util.List;
 
 public class MemberDAO {
 	
-	private static final String driver = "oracle.jdbc.driver.OracleDriver";
-	private static final String url = "jdbc:oracle:thin:@localhost:1521:XE";
-	private static final String user = "scott";
-	private static final String pwd = "tiger";
+	private static final String driver = "com.mysql.cj.jdbc.Driver";
+	private static final String url = "jdbc:mysql://localhost:3306/bookstore";
+	private static final String user = "root";
+	private static final String pwd = "1234";
 	
 	private Connection con;
 	private PreparedStatement pstmt;
@@ -52,9 +52,9 @@ public class MemberDAO {
 	private void connDB() {
 		try {
 			Class.forName(driver);
-			System.out.println("Oracle 靛扼捞滚 肺爹 己傍");
+			System.out.println("MySQL 霌滊澕鞚措矂 搿滊敥 靹标车");
 			con = DriverManager.getConnection(url, user, pwd);
-			System.out.println("Connection 积己 己傍");
+			System.out.println("Connection 靸濎劚 靹标车");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
